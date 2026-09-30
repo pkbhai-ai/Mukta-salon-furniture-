@@ -1,0 +1,6 @@
+{
+  "name": "MUKTA | Premium Salon & Spa Furniture",
+  "description": "Architectural salon and spa furniture manufacturer offering cinematic 3D visualizers, custom bespoke craft, and ergonomic salon seating.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

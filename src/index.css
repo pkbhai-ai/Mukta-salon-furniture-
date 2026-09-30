@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Outfit", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-ivory: #FDFBF7;
+  --color-cream: #F8F5EE;
+  --color-sand: #ECE5DA;
+  --color-sand-dark: #DDD4C6;
+  --color-walnut: #2A1D17;
+  --color-walnut-dark: #1E1511;
+  --color-champagne: #C8A97E;
+  --color-champagne-light: #DFCCA9;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #FDFBF7;
+    color: #1E1C1A;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD4C6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A97E;
+}
+
+/* Cute Luxury Smooth Micro-Transitions */
+.transition-luxury {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 400ms;
+}
+
+/* Subtle architectural grain */
+.bg-grain {
+  background-image: radial-gradient(rgba(42, 29, 23, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Animated Underline Effect for Links & Headings */
+.editorial-link {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+.editorial-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1.5px;
+  background-color: currentColor;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.editorial-link:hover {
+  transform: translateY(-1px);
+}
+.editorial-link:hover::after {
+  width: 100%;
+}
+
+/* Cute button hover bounce/lift */
+.btn-cute {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.2s ease;
+}
+.btn-cute:hover {
+  transform: translateY(-2px);
+}
+.btn-cute:active {
+  transform: translateY(0.5px) scale(0.985);
+}
